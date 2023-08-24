@@ -1,4 +1,6 @@
-function sum(a, b) {
-  return a + b;
+function stringLength(string){
+  const length = string.length;
+  return length;
 }
-module.exports = sum;
+
+module.exports = stringLength;

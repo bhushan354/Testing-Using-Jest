@@ -1,5 +1,7 @@
-const sum = require('./sum');
+const stringLength = require('./sum.js');
 
-test('adds 1 + 2 to equal 3', () => {
-  expect(sum(1, 2)).toBe(3);
+test('stringLength test', () => {
+  const inputString = "Hello, world!";
+  const result = stringLength(inputString);
+  expect(result).toBe(inputString.length);
 });
