@@ -1,17 +1,13 @@
-const stringLength = require('./sum.js');
-const inputString = "Hello";
-test('stringLength test', () => {
- 
-  const result = stringLength(inputString);
-  expect(result).toBe(inputString.length);
+const reverseString = require('./sum.js');
+
+test ('reversestring testing',  ()=>{
+  const inputString = "Bhusha";
+  const reversed = reverseString(inputString);
+  expect(reversed).toBe("ahsuhB"); 
 });
 
-test('throws error for less than 1 character', () => {
+test('testing empty string', ()=> {
   const inputString = '';
-  expect(() => stringLength(inputString)).toThrowError("String must be at least 1 character long");
-});
-
-test('throws error for string longer than 10 characters', () => {
-  const inputString = 'ThisIsTooLong';
-  expect(() => stringLength(inputString)).toThrowError("String must be less than 10 character");
+  const reversed = reverseString(inputString);
+  expect(reversed).toBe('');
 });
